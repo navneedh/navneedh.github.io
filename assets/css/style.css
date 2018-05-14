@@ -1,59 +1,33 @@
-.content {
-width: 400px;
-height: 200px;
-color: white;
-cursor: pointer;
-text-transform: uppercase;
-padding-bottom: 20px;
-position: relative;
-background: #333;
- }
 
-.content .line {
-height: 2px;
-background: white;
-position: absolute;
-top: 10px;
-right: 0;
--webkit-animation: dude .75s 1 forwards;
+.key-anim1 {
+  -webkit-animation: Drawpath 1s linear forwards;
+  animation: Drawpath 1s linear forwards;
+  stroke-dasharray: 0,100;
+}
+.key-anim2 {
+  -webkit-animation: Drawpath 1s linear 1s forwards;
+  animation: Drawpath 1s linear 1s forwards;
+  stroke-dasharray: 0,100;
+}
+.key-anim3 {
+  -webkit-animation: Drawpath 1s linear 2s forwards;
+  animation: Drawpath 1s linear 2s forwards;
+  stroke-dasharray: 0,100;
+}
 
--moz-animation: dude .75s 1 forwards;
-
--o-animation: dude .75s 1 forwards;
-
-animation: dude .75s 1 forwards;
-
- }
-
-     @-webkit-keyframes dude {
-  0% {
-    width: 0;
+@-webkit-keyframes Drawpath {
+  from {
+    stroke-dasharray: 0,100;
   }
-  100% {
-    width: 100%;
+  to {
+    stroke-dasharray: 100,100;
   }
 }
-@-moz-keyframes dude {
-  0% {
-    width: 0;
+@keyframes Drawpath {
+  from {
+    stroke-dasharray: 0,100;
   }
-  100% {
-    width: 100%;
-  }
-}
-@-o-keyframes dude {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@keyframes dude {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
+  to {
+    stroke-dasharray: 100,100;
   }
 }
