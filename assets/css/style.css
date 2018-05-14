@@ -1,33 +1,29 @@
-
+.debug{}
 .key-anim1 {
-  -webkit-animation: Drawpath 1s linear forwards;
-  animation: Drawpath 1s linear forwards;
-  stroke-dasharray: 0,100;
-}
-.key-anim2 {
-  -webkit-animation: Drawpath 1s linear 1s forwards;
-  animation: Drawpath 1s linear 1s forwards;
-  stroke-dasharray: 0,100;
-}
-.key-anim3 {
-  -webkit-animation: Drawpath 1s linear 2s forwards;
-  animation: Drawpath 1s linear 2s forwards;
-  stroke-dasharray: 0,100;
+  animation: Drawpath 2.5s linear forwards;
+  animation-delay: 3s;
 }
 
-@-webkit-keyframes Drawpath {
-  from {
-    stroke-dasharray: 0,100;
-  }
-  to {
-    stroke-dasharray: 100,100;
-  }
+.tester {
+  animation: Drawpath 2.5s linear forwards;
 }
+
+svg {
+  display: block;
+  width: 500px;
+}
+
+rect {
+  transform-origin: 0% 0%;
+}
+
 @keyframes Drawpath {
   from {
     stroke-dasharray: 0,100;
+    stroke-width: 1;
   }
   to {
     stroke-dasharray: 100,100;
+    stroke-width: 0;
   }
 }
