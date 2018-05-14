@@ -8,7 +8,7 @@ function adjust() {
         	$('.sm-path').attr('d','M8,17a11,11 0 1,0 22,0a11,11 0 1,0 -22,0');
         	$('.sm-path.opp').attr('d','M30,17a11,11 0 1,0 -22,0a11,11 0 1,0 22,0');
         }
-        else {
+        else { 
         	$('.img-path').attr('d','M5,85a77,77 0 1,0 154,0a77,77 0 1,0 -154,0');
         	$('.sm-path').attr('d','M5,30a23,23 0 1,0 46,0a23,23 0 1,0 -46,0');
         	$('.sm-path.opp').attr('d','M51,30a23,23 0 1,0 -46,0a23,23 0 1,0 46,0');
@@ -24,7 +24,7 @@ function adjust() {
 	$('#content-box').css({top: Math.round(boxHeight-divHeight)});
 }
 
-// Run adjust() for the first time 
+// Run adjust() for the first time
 adjust();
 
 // Show window when it loads and run slider
@@ -62,7 +62,7 @@ $(window).load(function() {
           timeout = setTimeout(delayed, threshold || 100);
       };
   }
-  // smartresize 
+  // smartresize
   jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
 
 })(jQuery,'smartresize');
@@ -76,7 +76,7 @@ $(window).smartresize(function(){
 /*!
  * classie - class helper functions
  * from bonzo https://github.com/ded/bonzo
- * 
+ *
  * classie.has( elem, 'my-class' ) -> true/false
  * classie.add( elem, 'my-new-class' )
  * classie.remove( elem, 'my-unwanted-class' )
@@ -162,7 +162,7 @@ if ( typeof define === 'function' && define.amd ) {
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
@@ -172,11 +172,11 @@ if ( typeof define === 'function' && define.amd ) {
 
 	window.requestAnimFrame = function(){
 		return (
-			window.requestAnimationFrame       || 
-			window.webkitRequestAnimationFrame || 
-			window.mozRequestAnimationFrame    || 
-			window.oRequestAnimationFrame      || 
-			window.msRequestAnimationFrame     || 
+			window.requestAnimationFrame       ||
+			window.webkitRequestAnimationFrame ||
+			window.mozRequestAnimationFrame    ||
+			window.oRequestAnimationFrame      ||
+			window.msRequestAnimationFrame     ||
 			function(/* function */ callback){
 				window.setTimeout(callback, 1000 / 60);
 			}
@@ -185,17 +185,17 @@ if ( typeof define === 'function' && define.amd ) {
 
 	window.cancelAnimFrame = function(){
 		return (
-			window.cancelAnimationFrame       || 
-			window.webkitCancelAnimationFrame || 
-			window.mozCancelAnimationFrame    || 
-			window.oCancelAnimationFrame      || 
-			window.msCancelAnimationFrame     || 
+			window.cancelAnimationFrame       ||
+			window.webkitCancelAnimationFrame ||
+			window.mozCancelAnimationFrame    ||
+			window.oCancelAnimationFrame      ||
+			window.msCancelAnimationFrame     ||
 			function(id){
 				window.clearTimeout(id);
 			}
 		);
 	}();
-	
+
 	var svgs = Array.prototype.slice.call( document.querySelectorAll( 'svg' ) ),
 		hidden = Array.prototype.slice.call( document.querySelectorAll( '.hide' ) ),
 		hidden_box = Array.prototype.slice.call( document.querySelectorAll( '.hide-bg' ) ),
@@ -210,7 +210,7 @@ if ( typeof define === 'function' && define.amd ) {
 			path[i] = el;
 			var l = path[i].getTotalLength();
 			length[i] = l;
-			path[i].style.strokeDasharray = l + ' ' + l; 
+			path[i].style.strokeDasharray = l + ' ' + l;
 			path[i].style.strokeDashoffset = l;
 		} );
 
@@ -263,7 +263,7 @@ if ( typeof define === 'function' && define.amd ) {
 ;(function($) {
 
     $.fn.leanSlider = function(options) {
-    
+
         // Defaults
         var defaults = {
             pauseTime: 5000,
@@ -280,7 +280,7 @@ if ( typeof define === 'function' && define.amd ) {
             afterChange: function(){},
             afterLoad: function(){}
         };
-        
+
         // Set up plugin vars
         var plugin = this,
             settings = {},
@@ -288,26 +288,26 @@ if ( typeof define === 'function' && define.amd ) {
             slides = slider.children(),
             currentSlide = 0,
             timer = 0;
-        
+
         var init = function() {
             // Set up settings
             settings = $.extend({}, defaults, options);
-                
+
             // Add inital classes
             slider.addClass('lean-slider');
             slides.addClass('lean-slider-slide');
-            
+
             currentSlide = settings.startSlide;
             if(settings.startSlide < 0 || settings.startSlide >= slides.length) currentSlide = 0;
             $(slides[currentSlide]).addClass('current');
-            
+
             // Set up directionNav
             if(settings.directionNav && $(settings.directionNav).length){
                 var prevNav = $('<a href="#" class="lean-slider-prev">'+ settings.prevText +'</a>'),
                     nextNav = $('<a href="#" class="lean-slider-next">'+ settings.nextText +'</a>');
                 if(settings.directionNavPrevBuilder) prevNav = $(settings.directionNavPrevBuilder.call(this, settings.prevText));
                 if(settings.directionNavNextBuilder) nextNav = $(settings.directionNavNextBuilder.call(this, settings.nextText));
-                    
+
                 prevNav.on('click', function(e){
                     e.preventDefault();
                     plugin.prev();
@@ -316,26 +316,26 @@ if ( typeof define === 'function' && define.amd ) {
                     e.preventDefault();
                     plugin.next();
                 });
-        
+
                 $(settings.directionNav).append(prevNav);
                 $(settings.directionNav).append(nextNav);
             }
-            
+
             // Set up controlNav
             if(settings.controlNav && $(settings.controlNav).length){
                 slides.each(function(i){
                     var controlNav = $('<a href="#" class="lean-slider-control-nav">'+ (i + 1) +'</a>');
                     if(settings.controlNavBuilder) controlNav = $(settings.controlNavBuilder.call(this, i, $(slides[i])));
-                    
+
                     controlNav.on('click', function(e){
                         e.preventDefault();
                         plugin.show(i);
                     });
-                    
+
                     $(settings.controlNav).append(controlNav);
                 });
             }
-            
+
             // Set up pauseOnHover
             /*if(settings.pauseOnHover && settings.pauseTime && settings.pauseTime > 0){
                 slider.hover(
@@ -347,14 +347,14 @@ if ( typeof define === 'function' && define.amd ) {
                     }
                 );
             }*/
-            
+
             // Initial processing
             updateControlNav();
             doTimer();
-            
+
             // Trigger the afterLoad callback
             settings.afterLoad.call(this);
-            
+
             return plugin;
         };
 
@@ -365,52 +365,52 @@ if ( typeof define === 'function' && define.amd ) {
                 timer = setTimeout(function(){ plugin.next(); }, settings.pauseTime);
             }
         };
-        
+
         // Update controlNav
         var updateControlNav = function(){
             if(settings.controlNav){
                 $('.lean-slider-control-nav', settings.controlNav).removeClass('active');
                 $($('.lean-slider-control-nav', settings.controlNav).get(currentSlide)).addClass('active');
-            }  
+            }
         };
-        
+
         // Prev
         plugin.prev = function(){
             // Trigger the beforeChange callback
             settings.beforeChange.call(this, currentSlide);
-        
+
             currentSlide--;
             if(currentSlide < 0) currentSlide = slides.length - 1;
             slides.removeClass('current');
             $(slides[currentSlide]).addClass('current');
             updateControlNav();
             doTimer();
-            
+
             // Trigger the afterChange callback
             settings.afterChange.call(this, currentSlide);
         };
-        
+
         // Next
         plugin.next = function(){
             // Trigger the beforeChange callback
             settings.beforeChange.call(this, currentSlide);
-            
+
             currentSlide++;
             if(currentSlide >= slides.length) currentSlide = 0;
             slides.removeClass('current');
             $(slides[currentSlide]).addClass('current');
             updateControlNav();
             doTimer();
-            
+
             // Trigger the afterChange callback
             settings.afterChange.call(this, currentSlide);
         };
-        
+
         // Show
         plugin.show = function(index){
             // Trigger the beforeChange callback
             settings.beforeChange.call(this, currentSlide);
-            
+
             currentSlide = index;
             if(currentSlide < 0) currentSlide = slides.length - 1;
             if(currentSlide >= slides.length) currentSlide = 0;
@@ -418,13 +418,13 @@ if ( typeof define === 'function' && define.amd ) {
             $(slides[currentSlide]).addClass('current');
             updateControlNav();
             doTimer();
-            
+
             // Trigger the afterChange callback
             settings.afterChange.call(this, currentSlide);
         };
-        
+
         // Call constructor
         return init();
     };
-    
+
 })(jQuery);
