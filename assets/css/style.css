@@ -1,12 +1,12 @@
 /* ---- Main Structure ---- */
 
-html,
-body,
-#container {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
+html, 
+body,  
+#container { 
+	margin: 0; 
+	padding: 0; 
+	height: 100%; 
+	width: 100%; 
 }
 #loader {
 	width: 100%;
@@ -170,22 +170,22 @@ a {
 	background-position: center;
 }
 
-.slider-wrapper {
-    position: relative;
+.slider-wrapper { 
+    position: relative; 
     width: 100%;
     height: 100%;
 }
 
 .lean-slider {
-	overflow: hidden;
+	overflow: hidden; 
 }
 .lean-slider-slide {
     display: block;
     position: absolute;
     opacity: 0;
 }
-.lean-slider-slide.current {
-	opacity: 1;
+.lean-slider-slide.current { 
+	opacity: 1; 
 }
 
 #slider-direction-nav {
@@ -227,7 +227,7 @@ a {
     transition: opacity 0.2s linear;
     opacity: 0.2;
 }
-.slider-wrapper:hover #slider-control-nav {
+.slider-wrapper:hover #slider-control-nav { 
     opacity: 0.8;
 }
 #slider-control-nav a {
@@ -240,7 +240,7 @@ a {
     margin: 0 3px;
     transition: none;
 }
-#slider-control-nav a.active {
+#slider-control-nav a.active { 
     background: url('../img/bullet_active.svg') no-repeat 0 0;
 }
 

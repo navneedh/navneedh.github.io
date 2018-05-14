@@ -6,7 +6,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- *
+ * 
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
@@ -16,11 +16,11 @@
 
 	window.requestAnimFrame = function(){
 		return (
-			window.requestAnimationFrame       ||
-			window.webkitRequestAnimationFrame ||
-			window.mozRequestAnimationFrame    ||
-			window.oRequestAnimationFrame      ||
-			window.msRequestAnimationFrame     ||
+			window.requestAnimationFrame       || 
+			window.webkitRequestAnimationFrame || 
+			window.mozRequestAnimationFrame    || 
+			window.oRequestAnimationFrame      || 
+			window.msRequestAnimationFrame     || 
 			function(/* function */ callback){
 				window.setTimeout(callback, 1000 / 60);
 			}
@@ -29,17 +29,17 @@
 
 	window.cancelAnimFrame = function(){
 		return (
-			window.cancelAnimationFrame       ||
-			window.webkitCancelAnimationFrame ||
-			window.mozCancelAnimationFrame    ||
-			window.oCancelAnimationFrame      ||
-			window.msCancelAnimationFrame     ||
+			window.cancelAnimationFrame       || 
+			window.webkitCancelAnimationFrame || 
+			window.mozCancelAnimationFrame    || 
+			window.oCancelAnimationFrame      || 
+			window.msCancelAnimationFrame     || 
 			function(id){
 				window.clearTimeout(id);
 			}
 		);
 	}();
-
+	
 	var svgs = Array.prototype.slice.call( document.querySelectorAll( 'svg' ) ),
 		hidden = Array.prototype.slice.call( document.querySelectorAll( '.hide' ) ),
 		hidden_box = Array.prototype.slice.call( document.querySelectorAll( '.hide-bg' ) ),
@@ -54,7 +54,7 @@
 			path[i] = el;
 			var l = path[i].getTotalLength();
 			length[i] = l;
-			path[i].style.strokeDasharray = l + ' ' + l;
+			path[i].style.strokeDasharray = l + ' ' + l; 
 			path[i].style.strokeDashoffset = l;
 		} );
 
