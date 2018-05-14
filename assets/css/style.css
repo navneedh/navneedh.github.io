@@ -1,0 +1,59 @@
+.content {
+width: 400px;
+height: 200px;
+color: white;
+cursor: pointer;
+text-transform: uppercase;
+padding-bottom: 20px;
+position: relative;
+background: #333;
+ }
+
+.content .line {
+height: 2px;
+background: white;
+position: absolute;
+top: 10px;
+right: 0;
+-webkit-animation: dude .75s 1 forwards;
+
+-moz-animation: dude .75s 1 forwards;
+
+-o-animation: dude .75s 1 forwards;
+
+animation: dude .75s 1 forwards;
+
+ }
+
+     @-webkit-keyframes dude {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes dude {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-o-keyframes dude {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes dude {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
