@@ -120,7 +120,7 @@
   text-indent: -9999px;
   margin-left: 15px;
   opacity: .4;
-  -webkit-transition: all 1s ease-in;
+  -webkit-transition: all 0.3s ease-in;
 }
 .social-links .email-link-outer {
   margin-top: 10px;
