@@ -48,7 +48,7 @@
   left: 50%;
   top: 70%;
   margin-left: -168px;
-  opacity: .4;
+  opacity: .3;
   margin-top: -168px;
   background-image: url(brain.png);
   background-size: 100%;
@@ -120,7 +120,7 @@
   text-indent: -9999px;
   margin-left: 15px;
   opacity: .4;
-  -webkit-transition: all 0.1s ease-in;
+  -webkit-transition: all .1s ease-in;
 }
 .social-links .email-link-outer {
   margin-top: 10px;
@@ -152,6 +152,14 @@
 .social-link-item-github {
   background-position: -40px 0;
   width: 18px;
+}
+.social-link-item-dribbble {
+  background-position: -58px 0;
+  width: 21px;
+}
+.social-link-item-behance {
+  background-position: -78px 0;
+  width: 26px;
 }
 .social-link-item-medium {
   background-position: -105px 0;
