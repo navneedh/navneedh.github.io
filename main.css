@@ -53,17 +53,7 @@
   background-image: url(brain.png);
   background-size: 100%;
 }
-.triangle-pattern {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url('triangles.png');
-  background-size: cover;
-  background-position: center;
-  opacity: .03;
-}
+
 
 /* Type
 ----------------------------- */
@@ -164,7 +154,7 @@
 .social-link-item-medium {
   background-position: -105px 0;
   width: 18px;
-}
+} 
 
 @media (max-width: 600px) {
   .name {
