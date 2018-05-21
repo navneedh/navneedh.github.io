@@ -52,9 +52,18 @@
   margin-top: -168px;
   background-image: url(brain.png);
   background-size: 100%;
-  -moz-animation-delay: 0.8s;
 }
-
+.triangle-pattern {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('triangles.png');
+  background-size: cover;
+  background-position: center;
+  opacity: .03;
+}
 
 /* Type
 ----------------------------- */
@@ -69,7 +78,6 @@
   margin-bottom: 0;
   margin-top: 28px;
   text-transform: uppercase;
-  -moz-animation-delay: 0.8s;
 }
 .byline {
   margin-top: 2px;
