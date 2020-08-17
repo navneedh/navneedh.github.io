@@ -24,6 +24,8 @@ function myFunction() {
     social_links.style['opacity'] = "0";
     arrow_button.style['opacity'] = "0";
 
+    social_links_large.style['display'] = "block";
+
 	social_links_large.classList.add("fadein");
     aboutme_content.classList.add("fadein");
 	aboutme_header.classList.add("fadein");

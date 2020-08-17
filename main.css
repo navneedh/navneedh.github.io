@@ -23,7 +23,10 @@ html {
   width :100%;
   background-image: url('images/background.jpg');
   /*background-position: center;*/
-  background-color: red;
+
+  background-color: rgba(3,11,30, 0.9);
+background-repeat: no-repeat;
+background-size:100% 100%;
     transition: 3s;
 }
 
@@ -194,6 +197,7 @@ width: 100%;
   margin-left: 300px;
   z-index: 2;
   opacity: 0;
+  display: none;
 }
 
 .email-large {
