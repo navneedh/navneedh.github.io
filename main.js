@@ -12,23 +12,34 @@ function myFunction() {
   var aboutme_content = document.getElementsByClassName("aboutmecontent")[0];
     var arrow_button = document.getElementsByClassName("arrow_button")[0];
 
+
+  var email_large = document.getElementsByClassName("email-large")[0];
+  var linkedin_large = document.getElementsByClassName("linkedin-large")[0];
+  var resume_large = document.getElementsByClassName("resume-large")[0];
+  var github_large = document.getElementsByClassName("github-large")[0];
+  
   if (landing.style.display === "none") {
     landing.style.display = "block";
   } else {
-        landing.style.height = "10%";
+    landing.style.height = "12%";
     about_me.style.height = "100%";
     name.style['width'] = "0";
     name.style['margin-left'] = "30px";
-    landingcontent.style['top'] = '10px';
-    byline.style['opacity'] = "0";
-    social_links.style['opacity'] = "0";
-    arrow_button.style['opacity'] = "0";
+    landingcontent.style['top'] = '0px';
 
-    social_links_large.style['display'] = "block";
 
-	social_links_large.classList.add("fadein");
+    byline.parentNode.removeChild(byline);
+    arrow_button.parentNode.removeChild(arrow_button);
+    social_links.parentNode.removeChild(social_links);
+
+	 social_links_large.classList.add("fadein");
     aboutme_content.classList.add("fadein");
-	aboutme_header.classList.add("fadein");
+	 aboutme_header.classList.add("fadein");
+
+   email_large.classList.add("fadein");
+   linkedin_large.classList.add("fadein");
+   resume_large.classList.add("fadein");
+   github_large.classList.add("fadein");
 
   }
 }

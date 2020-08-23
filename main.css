@@ -18,7 +18,7 @@ html {
 
 #section1 {
     position:absolute;
-    bottom: 10px;
+    bottom: 0;
       height: 100%;
   width :100%;
   background-image: url('images/background.jpg');
@@ -61,9 +61,10 @@ top:300px;
 }
 
 .arrow_button {
-position:absolute;
+position:relative;
 text-align: center;
- bottom: 0; right: 50%;
+left: -15px;
+top: 700px;
   
 }
 
@@ -76,19 +77,7 @@ text-align: center;
   
 #arrows:hover {
     
-    polygon {
-      fill: #FFF;
-      transition: all .3s ease-in;
-
-      &.arrow-bottom {
-        transform: translateY(12px);
-      }
-
-      &.arrow-middle {
-        transform: translateY(24px);
-      }
-      
-    }
+opacity: 0.4;
   
   }
   
@@ -190,43 +179,51 @@ width: 100%;
 ----------------------------- */
 .social-links-large {
   position: absolute;
-  opacity: 1;
   color: white;
   top:-10px;
   left:0;
   margin-left: 300px;
   z-index: 2;
   opacity: 0;
-  display: none;
 }
 
 .email-large {
   position: relative;
   left:200px;
+  color: white;
+    z-index: 2;
+  opacity: 0;
 }
 .linkedin-large {
   position: relative;
   left:150px;
+  color: white;
+    z-index: 2;
+  opacity: 0;
 }
 .github-large {
   position: relative;
   left:50px;
+  color: white;
+    z-index: 2;
+  opacity: 0;
 }
 .resume-large {
   position: relative;
     left:100px;
+    color: white;
+      z-index: 2;
+  opacity: 0;
 }
 
 
 .social-links {
   position: relative;
-  width: 475px;
-  left: 50%;
-  bottom: 0px;
-  margin-left: -237px;
-  padding: 0;
+  opacity: 1;
+  color: white;
+  z-index: 2;
   list-style-type: none;
-    z-index: 2;
+  left: -50px;
 }
 .social-links > li {
   display: inline-block;
@@ -235,10 +232,6 @@ width: 100%;
     opacity: .4;
 }
 
-.email-link:hover,
-.email-link:focus {
-  opacity: 1;
-}
 .social-link-item:hover{
   opacity: 1;
 }
@@ -247,17 +240,23 @@ width: 100%;
   width: 21px;
 }
 .social-link-item-linkedin {
-  background-position: -41px 0;
-  width: 59px;
+  position: relative;
+  left:20px;
 }
 .social-link-item-github {
-  background-position: -40px 0;
-  width: 18px;
+  position: relative;
+  left:0px;
 }
 .social-link-item-resume {
-  background-position: -58px 0;
-  width: 21px;
+  position: relative;
+  left:10px;
 }
+.social-link-item-email {
+  position: relative;
+  left:30px;
+}
+
+
 
 
 @media (max-width: 600px) {
