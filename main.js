@@ -24,7 +24,7 @@ function myFunction() {
     landing.style.height = "12%";
     about_me.style.height = "100%";
     name.style['width'] = "0";
-    name.style['margin-left'] = "30px";
+    // name.style['left'] = "0px";
     landingcontent.style['top'] = '0px';
 
 
@@ -32,6 +32,7 @@ function myFunction() {
     arrow_button.parentNode.removeChild(arrow_button);
     social_links.parentNode.removeChild(social_links);
 
+    name.classList.add("fadetranslate");
 	 social_links_large.classList.add("fadein");
     aboutme_content.classList.add("fadein");
 	 aboutme_header.classList.add("fadein");
