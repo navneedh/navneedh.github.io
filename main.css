@@ -128,7 +128,7 @@ width: 100%;
   transition: width 3s ease;
 }
 .byline {
-  text-decoration: none;
+  
   margin-top: 2px;
   position: relative;
   z-index: 2;
@@ -139,6 +139,7 @@ width: 100%;
   letter-spacing: 0.4em;
   text-transform: uppercase;
     color: white;
+    text-decoration: none;
   
 }
 
