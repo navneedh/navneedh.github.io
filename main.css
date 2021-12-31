@@ -137,6 +137,7 @@ width: 100%;
   letter-spacing: 0.4em;
   text-transform: uppercase;
     color: white;
+  text-decoration: "none";
 }
 
 .byline:hover{
