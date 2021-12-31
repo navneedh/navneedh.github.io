@@ -5,4 +5,4 @@ function hideLoader() {
 
 // $(window).ready(hideLoader);
 $('#section1').toggle();
-setTimeout(hideLoader, 5 * 1000);
+setTimeout(hideLoader, 5.5 * 1000);
