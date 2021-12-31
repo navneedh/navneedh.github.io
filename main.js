@@ -5,5 +5,4 @@ function hideLoader() {
 // $(window).ready(hideLoader);
 
 
-setTimeout(hideLoader, 10 * 1000);
-
+setTimeout(hideLoader, 5 * 1000);
