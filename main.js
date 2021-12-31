@@ -1,6 +1,6 @@
 function hideLoader() {
     $('#loading').hide();
-    $('#section1').toggle();
+    $('#section1').css('visibility', 'visible');
 }
 
 // $(window).ready(hideLoader);
